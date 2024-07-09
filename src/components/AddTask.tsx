@@ -31,7 +31,13 @@ export default function AddTask({
         })}
         className="flex gap-2"
       >
-        <Input size="sm" placeholder="Enter a task" {...register("task")} />
+        <Input
+          size="sm"
+          placeholder="Enter a task"
+          isRequired
+          validationBehavior="native"
+          {...register("task")}
+        />
         <Button size="sm" type="submit" color="primary">
           Submit
         </Button>
