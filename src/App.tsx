@@ -6,8 +6,6 @@ import Tasks from "./components/Tasks";
 export default function App() {
   const [TaskList, SetTaskList] = useState<any>([]);
 
-
-
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("LOCTODO") || "[]");
     if (storedTasks) SetTaskList(storedTasks);

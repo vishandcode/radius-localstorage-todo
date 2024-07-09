@@ -9,9 +9,9 @@ export default function Tasks({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      {TaskList.map((item: any, index: number) => (
+      {TaskList.map((item: any) => (
         <div
-          key={index}
+          key={item?.id}
           className="border p-3 bg-blue-50 flex flex-row justify-between items-center"
         >
           <p>{item.task}</p>
@@ -19,7 +19,6 @@ export default function Tasks({
             size="sm"
             color="danger"
             onClick={() => {
-              console.log(item.id);
               const NewTaskList = TaskList.filter(
                 (task: any) => task.id !== item.id
               );
